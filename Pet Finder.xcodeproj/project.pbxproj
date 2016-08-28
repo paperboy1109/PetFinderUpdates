@@ -17,6 +17,8 @@
 		2269E9981B07D54200315741 /* Pet_FinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2269E9971B07D54200315741 /* Pet_FinderTests.swift */; };
 		2269E9A21B07E03500315741 /* PetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2269E9A11B07E03500315741 /* PetTableViewController.swift */; };
 		4E27EB591D735A2B0044B428 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E27EB581D735A2B0044B428 /* Pet.swift */; };
+		4E27EB601D7368020044B428 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E27EB5F1D7368020044B428 /* Theme.swift */; };
+		4E27EB621D7374680044B428 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E27EB611D7374680044B428 /* ThemeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		2269E9971B07D54200315741 /* Pet_FinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet_FinderTests.swift; sourceTree = "<group>"; };
 		2269E9A11B07E03500315741 /* PetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = PetTableViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		4E27EB581D735A2B0044B428 /* Pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		4E27EB5F1D7368020044B428 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		4E27EB611D7374680044B428 /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				4E27EB581D735A2B0044B428 /* Pet.swift */,
+				4E27EB5F1D7368020044B428 /* Theme.swift */,
+				4E27EB611D7374680044B428 /* ThemeManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -253,9 +259,11 @@
 				2269E9801B07D54200315741 /* AppDelegate.swift in Sources */,
 				2202157A1B0804F90000E359 /* SettingsTableViewController.swift in Sources */,
 				2269E9A21B07E03500315741 /* PetTableViewController.swift in Sources */,
+				4E27EB621D7374680044B428 /* ThemeManager.swift in Sources */,
 				4E27EB591D735A2B0044B428 /* Pet.swift in Sources */,
 				220215761B07F3C00000E359 /* SearchTableViewController.swift in Sources */,
 				224279DA1B2FC37B00E3B816 /* PetViewController.swift in Sources */,
+				4E27EB601D7368020044B428 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
