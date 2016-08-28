@@ -9,20 +9,27 @@
 import UIKit
 
 class SettingsTableViewController: UITableViewController {
-  @IBOutlet weak var themeSelector: UISegmentedControl!
-  @IBOutlet weak var applyButton: UIButton!
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
+    @IBOutlet weak var themeSelector: UISegmentedControl!
+    @IBOutlet weak var applyButton: UIButton!
     
-    navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Done, target: self, action: #selector(SettingsTableViewController.dismiss))  // "dismiss")
-  }
-  
-  func dismiss() {
-    self.dismissViewControllerAnimated(true, completion: nil)
-  }
-  
-  @IBAction func applyTheme(sender: UIButton) {
-    dismiss()
-  }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Done, target: self, action: #selector(SettingsTableViewController.dismiss))  // "dismiss")
+        
+        themeSelector.selectedSegmentIndex = ThemeManager.currentTheme().rawValue
+    }
+    
+    func dismiss() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func applyTheme(sender: UIButton) {
+        
+        if let selectedTheme = Theme(rawValue: themeSelector.selectedSegmentIndex) {
+            ThemeManager.applyTheme(selectedTheme)
+        }
+        
+        dismiss()
+    }
 }
