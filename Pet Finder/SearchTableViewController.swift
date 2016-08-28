@@ -21,6 +21,9 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    speciesSelector.setImage(UIImage(named: "dog"), forSegmentAtIndex: 0)
+    speciesSelector.setImage(UIImage(named: "cat"), forSegmentAtIndex: 1)
+    
     navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Done, target: self, action: #selector(SearchTableViewController.dismiss))
     
     updateNumberOfPaws(pawStepper)

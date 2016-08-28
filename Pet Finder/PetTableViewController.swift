@@ -47,6 +47,9 @@ class PetTableViewController: UITableViewController, UIPopoverPresentationContro
   
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
+    
+    view.backgroundColor = ThemeManager.currentTheme().backgroundColor
+    tableView.separatorColor = ThemeManager.currentTheme().secondaryColor
   }
   
   // MARK: - Search
