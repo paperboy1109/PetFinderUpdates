@@ -19,4 +19,14 @@ struct ThemeManager {
             return .Default
         }
     }
+    
+    static func applyTheme(theme: Theme) {
+        // 1
+        NSUserDefaults.standardUserDefaults().setValue(theme.rawValue, forKey: SelectedThemeKey)
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        // 2
+        let sharedApplication = UIApplication.sharedApplication()
+        sharedApplication.delegate?.window??.tintColor = theme.mainColor
+    }
 }
