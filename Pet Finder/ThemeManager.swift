@@ -33,5 +33,21 @@ struct ThemeManager {
         // 3 - extend the theme-specific visual modifications to the navigation bar
         UINavigationBar.appearance().barStyle = theme.barStyle
         UINavigationBar.appearance().setBackgroundImage(theme.navigationBackgroundImage, forBarMetrics: .Default)
+        
+        // 4 - Customize the navigation back bar indicator
+        UINavigationBar.appearance().backIndicatorImage = UIImage(named: "backArrow")
+        // UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "backArrowMask")
+        // UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "backArrow")
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "backArrowMaskFixed")
+        
+        // 5 - Apply tab bar background images, background colors, and secondary theme colors
+        UITabBar.appearance().barStyle = theme.barStyle
+        UITabBar.appearance().backgroundImage = theme.tabBarBackgroundImage
+        
+        let tabIndicator = UIImage(named: "tabBarSelectionIndicator")?.imageWithRenderingMode(.AlwaysTemplate)
+        let tabResizableIndicator = tabIndicator?.resizableImageWithCapInsets(
+            UIEdgeInsets(top: 0, left: 2.0, bottom: 0, right: 2.0))
+        UITabBar.appearance().selectionIndicatorImage = tabResizableIndicator
+        
     }
 }
