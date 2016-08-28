@@ -21,12 +21,17 @@ struct ThemeManager {
     }
     
     static func applyTheme(theme: Theme) {
+        
         // 1
         NSUserDefaults.standardUserDefaults().setValue(theme.rawValue, forKey: SelectedThemeKey)
         NSUserDefaults.standardUserDefaults().synchronize()
         
-        // 2
+        // 2 - UIWindow inherits from UIView, so changing the tintColor applies throughout the app
         let sharedApplication = UIApplication.sharedApplication()
         sharedApplication.delegate?.window??.tintColor = theme.mainColor
+        
+        // 3 - extend the theme-specific visual modifications to the navigation bar
+        UINavigationBar.appearance().barStyle = theme.barStyle
+        UINavigationBar.appearance().setBackgroundImage(theme.navigationBackgroundImage, forBarMetrics: .Default)
     }
 }
